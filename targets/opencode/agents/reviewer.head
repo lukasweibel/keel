@@ -1,0 +1,14 @@
+---
+description: Independent reviewer for the quality gates of the keel workflow (minimal AIDLC). Checks requirements, units of work or code against given criteria and returns a review. Never changes files.
+mode: subagent
+temperature: 0.1
+permission:
+  edit: deny
+  webfetch: deny
+  bash:
+    "*": ask
+    "git status*": allow
+    "git diff*": allow
+    "git log*": allow
+---
+

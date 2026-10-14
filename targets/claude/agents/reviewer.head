@@ -1,0 +1,6 @@
+---
+name: reviewer
+description: Independent reviewer for the quality gates of the keel workflow (minimal AIDLC). Checks requirements, units of work or code against given criteria and returns a review. Never changes files.
+tools: Read, Grep, Glob, Bash
+---
+
