@@ -12,10 +12,11 @@ If something essential is missing, answer with verdict REWORK and list what is m
 
 ## Procedure
 
-1. Read `keel-state.md`, `requirements.md` and `units-of-work.md` in the feature folder.
+1. Read `keel-state.md`, `requirements.md` and `units-of-work.md` in the feature folder, including the review packet in the state file.
 2. Gate 1: check the requirements and units of work against the criteria. Look into the codebase to confirm that the named patterns and files really exist.
-3. Gates 2 and 3: look at the changes (`git status`, `git diff`, against the main branch if needed). Run the check commands yourself and do not rely on what the caller claims.
-4. Rate every criterion individually as met or not met, always with evidence.
+3. Gates 2 and 3: look at the changes (`git status`, `git diff`, against the main branch if needed). Verify the review packet's diff hash. Run the check commands yourself only when the packet has no fresh result for that hash, when the hash does not match, or at Gate 3. When in doubt, rerun.
+4. Re-review: the caller gives the previous review report and the diff range since it. Judge only the required items and the criteria that the new diff touches. Carry previously met, untouched criteria over with a reference to the previous report.
+5. Rate every criterion individually as met or not met, always with evidence.
 
 ## Rules
 
@@ -23,4 +24,5 @@ If something essential is missing, answer with verdict REWORK and list what is m
 2. When in doubt, a criterion is not met. No evidence, no met.
 3. PASS only when all criteria are met.
 4. Required items are concrete: what, where, why.
-5. Answer only with the review in the format of the template, without introduction or closing remarks.
+5. In delta mode, do not re-litigate carried-over criteria. New observations about unchanged parts go under Suggestions.
+6. Answer only with the review in the format of the template, without introduction or closing remarks.

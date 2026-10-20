@@ -56,7 +56,7 @@ Inception ──► Gate 1 ──► Construction: U1 ► Gate 2, U2 ► Gate 2 
 | Inception | Workspace detection, Requirements analysis, Units generation, Gate 1 |
 | Construction | per unit: Code generation, Build and test, Gate 2. Then Gate 3 for the whole feature |
 
-Every quality gate: check commands, then the reviewer, then your approval. AI proposes, human approves.
+Every quality gate: check commands, then the reviewer, then your approval. AI proposes, human approves. One frozen candidate gets one check run, and re-reviews are delta reviews over the changes since the last report.
 
 Same call in both tools:
 
@@ -64,6 +64,7 @@ Same call in both tools:
 /keel init                        create or refresh doc/project.md
 /keel feat login page with passkey   new feature
 /keel feat login_page             resume a feature
+/keel fix wrong date in invoice footer   small, obvious fix, lighter Gate 1
 /keel status                      overview of all features
 ```
 
@@ -97,5 +98,4 @@ Since the state lives in the project per feature, you can start a feature at wor
 1. More Construction stages from AIDLC: Functional design, NFR design, Infrastructure design.
 2. More reviewers for single gates, e.g. security.
 3. The Operations phase.
-4. Profiles like "small" (gate 2 only) and "full".
-5. Hooks that run the check commands automatically before each gate.
+4. Hooks that run the check commands automatically before each gate.

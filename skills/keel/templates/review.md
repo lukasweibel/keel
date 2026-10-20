@@ -3,6 +3,8 @@
 Feature: <name>
 Date: <DD.MM.YYYY HH:MM>
 Reviewer: reviewer | self review
+Review mode: full | delta
+Review base: <none, or previous review path and diff range>
 Verdict: PASS | REWORK
 
 ## Criteria
@@ -10,6 +12,12 @@ Verdict: PASS | REWORK
 | Nr | Criterion | Result | Evidence |
 |---|---|---|---|
 | 1 | | met | |
+
+## Carried over
+
+Criteria already met and unchanged since the review base. Empty in full mode.
+
+1.
 
 ## Required
 
